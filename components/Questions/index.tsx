@@ -1,10 +1,11 @@
 import * as React from 'react'
 
-// import { useSelector } from 'react-redux'
 import { useState ,useEffect } from 'react'
 import callAPI from '../../util'
 import './question.scss'
+
 let render = false
+
 export const Question : React.FC = ()=>{
     const [isCheckAnswers , setIsCheckAnswers] = useState(Number)
     const [isClickAnswers , setIsClickAnswers] = useState(Number)

@@ -24,14 +24,6 @@
     padding: 10px 50px;
     margin: 40px auto 0 auto;
 }
-.absolute-bg{
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 .absolute-bg img{
     border-radius: 30px;
 }
@@ -75,9 +67,9 @@ img{
 }
 .main{
     width: 80vw;
-    height: 100vh;
-    position: relative;
     margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 pre{
     white-space: pre-line;
