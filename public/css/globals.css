@@ -3,9 +3,6 @@ body {
   margin: 0;
 
 }
-main{
-  background-color: aquamarine;
-}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -60,6 +57,10 @@ ol, ul {
 
 blockquote, q {
 	quotes: none;
+}
+p{
+    word-break:break-all;
+    margin-bottom: 0 !important;
 }
 
 blockquote:before, blockquote:after,
@@ -367,3 +368,12 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
+img{
+    width: 100%;
+}
+/* @media screen and (max-width: 767px)
+{
+    html {
+        font-size: calc(100vw / 75);
+    }
+} */

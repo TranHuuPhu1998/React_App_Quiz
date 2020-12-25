@@ -1,0 +1,24 @@
+.app-wapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1200px;
+    height: 100%;
+}
+.app-main{
+    background-color: aquamarine;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width:767px){
+    .app-main{
+        height: 100%;
+    }
+    .app-wapper{
+        padding: 1rem;
+    }
+}

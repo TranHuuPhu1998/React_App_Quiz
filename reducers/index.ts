@@ -1,10 +1,13 @@
 import { combineReducers } from "redux";
-import articles from './reducer'
-import question from './reducerQuestion'
+import questions from './reducerQuestions'
+import category from './reducerCategorys'
+import listlesson from './reducerListLesson'
 
-export const appReducers = combineReducers({
-    articles,
-    question
+const appReducers = combineReducers({
+    questions,
+    category,
+    listlesson
 });
 
 export type RootState = ReturnType<typeof appReducers>
+export default appReducers

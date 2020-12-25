@@ -1,7 +1,8 @@
 import * as React from 'react'
-import { useState } from 'react'
+import { useState , useEffect } from 'react'
 import callAPI from '../../util'
-
+import Nav from '../../components/Nav'
+import NavQuiz from '../../components/NavQuiz'
 let rs:any[] = []
 
 const AddQuestion : React.FC = () =>{
@@ -9,9 +10,17 @@ const AddQuestion : React.FC = () =>{
     const [ , setQuestions] = useState(Object)
     const [quizCorrect , SetQuizCorrect] = useState(Object)
     const [lengthAns , SetLengthAns] = useState(Number)
-
+    const [listLesson, setListLesson] = useState(Array)
+    const [category , setCategory] = useState(String)
+    
     const totalAns = ["4","5","6","7","8","9"];
 
+    useEffect(() => {
+        callAPI("listlesson","GET",null).then((res:any)=>{
+            setListLesson(res.data)
+        })
+    }, [])
+    
     const onSaveAns = (e : React.FormEvent) =>{
         e.preventDefault()
         let arrTemp1:any = [];
@@ -43,11 +52,11 @@ const AddQuestion : React.FC = () =>{
             question : quizName,
             answers : arrTemp2 
         })
-        callAPI('apiquestions', "POST",{
+        callAPI('questions', "POST",{
             question : quizName,
-            answers : arrTemp2 
-        })
-        .then(data => {
+            answers : arrTemp2,
+            category : category
+        }).then(data => {
           console.log(data); 
         });
     }
@@ -74,7 +83,7 @@ const AddQuestion : React.FC = () =>{
     const RenderTotalAns = totalAns.map((ele)=>{
         return (
                 <div key={ele}>
-                <label htmlFor="" className="form-label gray fs-4">Đáp án {ele}: </label>
+                <label htmlFor="" className="form-label gray ">Đáp án {ele}: </label>
                 <input 
                     type="text"
                     name={ele}
@@ -82,57 +91,79 @@ const AddQuestion : React.FC = () =>{
                     onChange={handleChangeAns }/> 
                 </div>
             )
-        })
-
-
-
+    })
 
     return (
-        <div className="main">
-            <div className="fs-4 text-center mt-5">AddQuestion</div>
-            <form className="form-addquestion" onSubmit={onSaveAns} >
-               <div>
-               <label className="form-label gray fs-4" htmlFor="quizname">Nhận nội dung câu hỏi:</label>
-                <input 
-                    type="text" 
-                    name="quizName" 
-                    className="form-control"
-                    id="quizname" 
-                    onChange={(e)=> setQuizName(e.currentTarget.value)}/>
-               </div>
-                <label className="form-label gray fs-4" htmlFor="quizans"> Nhập nội dung câu trả lời:</label>
+        <div className="d-flex">
+            <Nav/>
+            <NavQuiz/>
+            <div className="main">
+                <div className="text-center mt-5">AddQuestion</div>
+                <form className="form-addquestion" onSubmit={onSaveAns} >
                 <div>
-                    <label htmlFor="" className="form-label gray fs-4">Đáp án 1:</label>
-                    <input 
-                        type="text" 
-                        name="content1" 
-                        className="form-control"
-                        onChange={handleChangeAns}/>
-                    <label htmlFor="" className="form-label gray fs-4">Đáp án 2:</label>
-                    <input 
-                        type="text" 
-                        name="content2"
+                    <div>
+                    <label className="form-label gray " htmlFor="">Chọn category</label>
+                    <select 
                         className="form-control" 
-                        onChange={handleChangeAns}/>
-                    <label htmlFor="" className="form-label gray fs-4">Đáp án 3:</label>
+                        name="category" 
+                        id="categoryid"
+                        onChange={(e)=>setCategory(e.currentTarget.value)}
+                        >
+                    <option defaultValue="Choose">Choose...</option>
+                    {
+                    
+                        listLesson.map((item:any , index)=>{
+                            return (
+                                <option key={index} value={item.category}>{item.category}</option>
+                            )
+                        })
+                    }
+                    </select>
+                    </div>
+
+                <label className="form-label gray " htmlFor="quizname">Nhận nội dung câu hỏi:</label>
                     <input 
                         type="text" 
-                        name="content3" 
+                        name="quizName" 
                         className="form-control"
-                        onChange={handleChangeAns }/>
-                    {RenderTotalAns}
+                        id="quizname" 
+                        onChange={(e)=> setQuizName(e.currentTarget.value)}/>
                 </div>
-                <div className="btn btn-secondary mt-3 mb-3 d-block" onClick={AddAnswers}>
-                    Thêm Đáp án
-                </div >
-     
-                <label htmlFor="" className="form-label gray fs-4 ">Nhập đáp án đúng:</label>
-                <input 
-                    className="form-control" 
-                    type="text" name="quizCorrect" 
-                    onChange={handleChangeCorrect} />
-                <input className="btn btn-primary mt-4" type="submit" value="submit" />
-            </form>
+                    <label className="form-label gray " htmlFor="quizans"> Nhập nội dung câu trả lời:</label>
+                    <div>
+                        <label htmlFor="" className="form-label gray ">Đáp án 1:</label>
+                        <input 
+                            type="text" 
+                            name="content1" 
+                            className="form-control"
+                            onChange={handleChangeAns}/>
+                        <label htmlFor="" className="form-label gray ">Đáp án 2:</label>
+                        <input 
+                            type="text" 
+                            name="content2"
+                            className="form-control" 
+                            onChange={handleChangeAns}/>
+                        <label htmlFor="" className="form-label gray ">Đáp án 3:</label>
+                        <input 
+                            type="text" 
+                            name="content3" 
+                            className="form-control"
+                            onChange={handleChangeAns }/>
+                        {RenderTotalAns}
+                    </div>
+                    <div className="btn btn-secondary mt-3 mb-3 d-block" onClick={AddAnswers}>
+                        Thêm Đáp án
+                    </div >
+        
+                    <label htmlFor="" className="form-label gray  ">Nhập đáp án đúng:</label>
+                    <input 
+                        className="form-control" 
+                        type="text" name="quizCorrect" 
+                        onChange={handleChangeCorrect} />
+                    <input className="btn btn-primary mt-4" type="submit" value="submit" />
+                </form>
+            </div>
+            
         </div>
     )
 }

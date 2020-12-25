@@ -1,0 +1,24 @@
+.radio{
+    width: 25px;
+    height: 25px;
+    border: 1px solid blue;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wapper__answers{
+    display: flex;
+}
+.circle{
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid blue;
+    border-radius: 50%;
+    background-color: white;
+}
+.radioActive{
+    background-color: red;
+}
