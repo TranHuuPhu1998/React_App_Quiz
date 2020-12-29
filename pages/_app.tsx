@@ -6,7 +6,7 @@ import { Footer } from "../components/Footer"
 
 import {Provider} from 'react-redux'
 import {createWrapper} from 'next-redux-wrapper';
-// import store from '../store/store'
+
 
 import { useStore } from '../store/store'
 

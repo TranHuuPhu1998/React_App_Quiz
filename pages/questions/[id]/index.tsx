@@ -4,8 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 import NotificationSystem from 'react-notification-system';
 import { useRouter } from 'next/router'
+import CallApi from '../../../util/index'
 
 import './styles.scss' 
+import { log } from 'console';
 
 const Questions : React.FC = ()=>{
     const [isCheckAnswers , setIsCheckAnswers] = useState(Number)
@@ -22,10 +24,8 @@ const Questions : React.FC = ()=>{
     const dispatch = useDispatch()
     const notificationSystem:any = React.createRef();
     
-    const reduxQuestionsAll = useSelector((state:any) => state.questions);
-    console.log("reduxQuestionsAll", reduxQuestionsAll)
-    
- 
+    // const reduxQuestionsAll = useSelector((state:any) => state.questions);
+
     const checkAnswers = (value : any ,id:number ) =>{
         setIsClickAnswers(id)
         setIsCheckAnswers(value.id)
@@ -34,14 +34,15 @@ const Questions : React.FC = ()=>{
 
     useEffect(() =>{
         let result = [];
-        reduxQuestionsAll.map((item:any,index:number)=>{
-            if(item.category === router.query.id){
-                result.push(item)
-            }
+        CallApi('questions','GET',null).then((res:any)=>{
+            res.data.map((item:any,index:number)=>{
+                if(item.category === router.query.id){
+                    result.push(item)
+                }
+            })
+            setQuestionsAll(result)
         })
-        
-        setQuestionsAll(result)
-    },[questions])
+    },[router.query.id])
 
     
     const onResultAnswers = (id: number) => {
@@ -96,7 +97,6 @@ const Questions : React.FC = ()=>{
                                     <p>{index + 1} . {item.question}</p>
                                 </pre>
                                 <p className="text-center text-success mt-4 mb-4">Choose The Coorect Answers</p>
-                                <p className="triangle"></p>
                                 <div className="list_answers">
                                 {
                                     item.answers.map((value :any, idex :number) => {
@@ -115,7 +115,7 @@ const Questions : React.FC = ()=>{
                                     })
                                 }
                                 </div>
-                                <div className="d-flex justify-content-between">
+                                <div className="quiz--btn">
                                     <button className="submit" onClick={()=>onResultAnswers(item.id)}>Submit</button>
                                     <button className={isClick === true ? "submit" : "submit js-pointer-events"} onClick={()=>onNextAnswers(item.id)}>Next</button>
                                 </div>

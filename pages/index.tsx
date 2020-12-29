@@ -8,11 +8,9 @@ const Home:React.FC =()=>{
   const dispatch = useDispatch();
   useEffect(() => {
       // You can await here
-
           dispatch(RequestApiListLesson());
           dispatch(RequestApiCategory());
           dispatch(RequestApiQuestion())
-
   }, [dispatch])
 
   return (
