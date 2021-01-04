@@ -12,6 +12,9 @@ import { useStore } from '../store/store'
 
 import './index.scss'
 import '../assets/style.scss';
+import React from 'react';
+import NavQuiz from '../components/NavQuiz';
+import Nav from '../components/Nav';
 const CustomApp: React.FC<AppProps> = ({Component , pageProps}) => {
     const store = useStore(pageProps.initialReduxState)
 
@@ -28,11 +31,14 @@ const CustomApp: React.FC<AppProps> = ({Component , pageProps}) => {
         </Head>
         <Header/>
         <div className="app-main">
+            <Nav/>
+            <NavQuiz/>
             <div className="app-wapper">
                 <Component {...pageProps}/>
             </div>
-            <Footer/>
+            
         </div>
+        <Footer/>
         </div>
         </Provider>
     )

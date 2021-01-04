@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { useState , useEffect } from 'react'
-import callAPI from '../../util'
-import Nav from '../../components/Nav'
-import NavQuiz from '../../components/NavQuiz'
+import { useSelector } from 'react-redux'
+import { RequestApiListLesson, RequestApiQuestionPOST } from '../../actions/index'
+import { useDispatch } from "react-redux";
+
 let rs:any[] = []
 
 const AddQuestion : React.FC = () =>{
@@ -10,15 +11,13 @@ const AddQuestion : React.FC = () =>{
     const [ , setQuestions] = useState(Object)
     const [quizCorrect , SetQuizCorrect] = useState(Object)
     const [lengthAns , SetLengthAns] = useState(Number)
-    const [listLesson, setListLesson] = useState(Array)
     const [category , setCategory] = useState(String)
-    
-    const totalAns = ["4","5","6","7","8","9"];
+    const dispatch = useDispatch();
+    const totalAns = ["4","5","6","7","8","9","10","11"];
+    const listLesson = useSelector((state:any)=> state.listlesson)
 
     useEffect(() => {
-        callAPI("listlesson","GET",null).then((res:any)=>{
-            setListLesson(res.data)
-        })
+        dispatch(RequestApiListLesson())
     }, [])
     
     const onSaveAns = (e : React.FormEvent) =>{
@@ -52,13 +51,11 @@ const AddQuestion : React.FC = () =>{
             question : quizName,
             answers : arrTemp2 
         })
-        callAPI('questions', "POST",{
+        dispatch(RequestApiQuestionPOST({
             question : quizName,
             answers : arrTemp2,
             category : category
-        }).then(data => {
-          console.log(data); 
-        });
+        }))
     }
     
     const handleChangeAns = (e : any) =>{
@@ -95,8 +92,7 @@ const AddQuestion : React.FC = () =>{
 
     return (
         <div className="d-flex">
-            <Nav/>
-            <NavQuiz/>
+
             <div className="main">
                 <div className="text-center mt-5">AddQuestion</div>
                 <form className="form-addquestion" onSubmit={onSaveAns} >

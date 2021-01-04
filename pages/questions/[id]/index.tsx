@@ -7,7 +7,6 @@ import { useRouter } from 'next/router'
 import CallApi from '../../../util/index'
 
 import './styles.scss' 
-import { log } from 'console';
 
 const Questions : React.FC = ()=>{
     const [isCheckAnswers , setIsCheckAnswers] = useState(Number)
@@ -75,7 +74,6 @@ const Questions : React.FC = ()=>{
 
     let widht_css = (lengthQuestion / questionsAll.length) * 100;
 
-    
     
     return (
         <div className="quiz-wapper">

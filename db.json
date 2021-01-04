@@ -1,276 +1,97 @@
 {
   "questions": [
     {
-      "id": 1,
+      "question": "javascript basic",
+      "answers": [
+        {
+          "id": 0,
+          "content": "javascript basic 1",
+          "isCorrect": false
+        },
+        {
+          "id": 1,
+          "content": "javascript basic 2",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "javascript basic 3",
+          "isCorrect": true
+        }
+      ],
       "category": "JavaScript Basic",
-      "question": "JavaScript Basic 1 ",
+      "id": 19
+    },
+    {
+      "question": "1+4=?",
       "answers": [
         {
           "id": 0,
-          "content": "<javascript>",
-          "isCorrect": false
-        },
-        {
-          "id": 1,
-          "content": "<script>",
+          "content": "5",
           "isCorrect": true
         },
         {
+          "id": 1,
+          "content": "6",
+          "isCorrect": false
+        },
+        {
           "id": 2,
-          "content": "<scripting>",
+          "content": "7",
           "isCorrect": false
         },
         {
           "id": 3,
-          "content": "<js>",
+          "content": "8",
           "isCorrect": false
         }
-      ]
-    },
-    {
-      "id": 2,
+      ],
       "category": "JavaScript OPP",
-      "question": "JavaScript OPP 2",
+      "id": 22
+    },
+    {
+      "question": "1+1=?",
       "answers": [
         {
           "id": 0,
-          "content": " Home Tool Markup Language",
-          "isCorrect": false
-        },
-        {
-          "id": 1,
-          "content": " Hyper Text Markup Language",
+          "content": "123",
           "isCorrect": true
         },
         {
-          "id": 2,
-          "content": " Hyperlinks and Text Markup Language",
+          "id": 1,
+          "content": "222",
           "isCorrect": false
         },
         {
-          "id": 3,
-          "content": "null",
+          "id": 2,
+          "content": "333",
           "isCorrect": false
         }
-      ]
+      ],
+      "category": "JavaScript OPP",
+      "id": 23
     },
     {
-      "id": 3,
-      "category": "ReactJS Basic",
-      "question": "ReactJS Basic 2",
+      "question": "9+10=?",
       "answers": [
         {
           "id": 0,
-          "content": "<javascript>",
-          "isCorrect": false
-        },
-        {
-          "id": 1,
-          "content": "<script>",
+          "content": "19",
           "isCorrect": true
         },
         {
-          "id": 2,
-          "content": "<scripting>",
+          "id": 1,
+          "content": "111",
           "isCorrect": false
         },
         {
-          "id": 3,
-          "content": "<js>",
+          "id": 2,
+          "content": "22",
           "isCorrect": false
         }
-      ]
-    },
-    {
-      "id": 4,
+      ],
       "category": "State and Props",
-      "question": "ReactJS 2",
-      "answers": [
-        {
-          "id": 0,
-          "content": " Home Tool Markup Language",
-          "isCorrect": false
-        },
-        {
-          "id": 1,
-          "content": " Hyper Text Markup Language",
-          "isCorrect": true
-        },
-        {
-          "id": 2,
-          "content": " Hyperlinks and Text Markup Language",
-          "isCorrect": false
-        },
-        {
-          "id": 3,
-          "content": "null",
-          "isCorrect": false
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "category": "English",
-      "question": "English 1",
-      "answers": [
-        {
-          "id": 0,
-          "content": " Home Tool Markup Language",
-          "isCorrect": false
-        },
-        {
-          "id": 1,
-          "content": " Hyper Text Markup Language",
-          "isCorrect": true
-        },
-        {
-          "id": 2,
-          "content": " Hyperlinks and Text Markup Language",
-          "isCorrect": false
-        },
-        {
-          "id": 3,
-          "content": "null",
-          "isCorrect": false
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "category": "English",
-      "question": "English 2",
-      "answers": [
-        {
-          "id": 0,
-          "content": " Home Tool Markup Language",
-          "isCorrect": false
-        },
-        {
-          "id": 1,
-          "content": " Hyper Text Markup Language",
-          "isCorrect": true
-        },
-        {
-          "id": 2,
-          "content": " Hyperlinks and Text Markup Language",
-          "isCorrect": false
-        },
-        {
-          "id": 3,
-          "content": "null",
-          "isCorrect": false
-        }
-      ]
-    },
-    {
-      "question": "JavaScript new 1",
-      "answers": [
-        {
-          "id": 0,
-          "content": "category 1",
-          "isCorrect": false
-        },
-        {
-          "id": 1,
-          "content": "category 2",
-          "isCorrect": false
-        },
-        {
-          "id": 2,
-          "content": "category 3",
-          "isCorrect": true
-        }
-      ],
-      "category": "JavaScript Basic",
-      "id": 7
-    },
-    {
-      "question": "từ \"intelligent\" tiếng việt nghĩa là gì",
-      "answers": [
-        {
-          "id": 0,
-          "content": "thông minh",
-          "isCorrect": true
-        },
-        {
-          "id": 1,
-          "content": "nhanh trí",
-          "isCorrect": false
-        },
-        {
-          "id": 2,
-          "content": "tài giỏi",
-          "isCorrect": false
-        }
-      ],
-      "category": "Vocabulary 1",
-      "id": 8
-    },
-    {
-      "question": "OPP la gi",
-      "answers": [
-        {
-          "id": 0,
-          "content": "la OPP",
-          "isCorrect": false
-        },
-        {
-          "id": 1,
-          "content": "la hướng đối tượng",
-          "isCorrect": true
-        },
-        {
-          "id": 2,
-          "content": "là abc",
-          "isCorrect": false
-        }
-      ],
-      "category": "JavaScript OPP",
-      "id": 9
-    },
-    {
-      "question": "default",
-      "answers": [
-        {
-          "id": 0,
-          "content": "mặt định",
-          "isCorrect": true
-        },
-        {
-          "id": 1,
-          "content": "định vị",
-          "isCorrect": false
-        },
-        {
-          "id": 2,
-          "content": "vị trí",
-          "isCorrect": false
-        }
-      ],
-      "category": "Vocabulary 2",
-      "id": 10
-    },
-    {
-      "question": "default",
-      "answers": [
-        {
-          "id": 0,
-          "content": "mặt định",
-          "isCorrect": true
-        },
-        {
-          "id": 1,
-          "content": "định vị",
-          "isCorrect": false
-        },
-        {
-          "id": 2,
-          "content": "vị trí",
-          "isCorrect": false
-        }
-      ],
-      "category": "Vocabulary 2",
-      "id": 11
+      "id": 31
     }
   ],
   "listlesson": [

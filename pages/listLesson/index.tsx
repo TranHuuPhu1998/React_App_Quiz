@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useRouter } from 'next/router'
 import { useSelector } from "react-redux";
-
+import Link from 'next/link'
 import './styles.scss'
 
 const ListLesson: React.FC = ({}) => {
@@ -14,10 +14,12 @@ const ListLesson: React.FC = ({}) => {
     }
 
     return (
-        <div>
+        <div> 
+            <Link href='addquestion'>addquestion</Link>
             {category && category?.map((item1: any, index: number) => {
                 return (
                     <div key={index}>
+                       
                         <h1 className="les-title">{index + 1}. {item1.name}</h1>
                         <div className="lesson-container">{listLesson && listLesson?.map((item: any, index: number) => {
                             if (item1.name === item.name) {

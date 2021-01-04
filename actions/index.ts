@@ -6,7 +6,7 @@ import callApi from "../util/index";
 export const GetDataRequestApiQuestion = (data)=> {
     return {
         type: Types.REQUEST_API_QUESTIONS,
-        payload:{
+        payload: {
             data
         }
     };
@@ -20,6 +20,70 @@ export const RequestApiQuestion = () =>{
             }
         })
         
+    }
+}
+
+//--------POST--------//
+
+export const GetDataRequestApiQuestionPOST = (data) =>{
+    return {
+        type: Types.ACTION_ADD_QUESTION,
+        payload: {
+            data
+        }
+    };
+}
+
+export const RequestApiQuestionPOST = (data) =>{
+    return dispatch => {
+        return callApi('questions' , 'POST' , data).then((res:any)=>{
+            if(res.data){
+                dispatch(GetDataRequestApiQuestionPOST(res.data))
+            }
+        })
+    }
+}
+
+//--------PATCH-----------//
+
+export const GetDataRequestApiQuestionPUT = (data) =>{
+    return {
+        type: Types.ACTION_ADD_QUESTION,
+        payload: {
+            data
+        }
+    };
+}
+
+export const RequestApiQuestionPUT = (data) =>{
+    return dispatch => {
+        return callApi(`questions/${data.id}` , 'PUT',data).then((res:any) =>{
+            if(res.state === 200){
+                dispatch(GetDataRequestApiQuestionPUT(data))
+            }
+        })
+    }
+}
+
+//--------DELETE----------//
+
+export const GetDataRequestApiQuestionDELETE = (id) =>{
+    return {
+        type : Types.ACTION_DELETE_QUESTION,
+        payload :{
+            id
+        }
+    }
+}
+
+export const RequestApiQuestionDELETE = (id) =>{
+    return dispatch =>{
+        
+        return callApi(`questions/${id}` , 'DELETE' , null).then((res:any) =>{
+            if(res.status === 200) {
+                dispatch(GetDataRequestApiQuestionDELETE(id))
+            }
+        })
     }
 }
 

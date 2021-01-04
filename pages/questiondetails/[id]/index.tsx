@@ -1,27 +1,22 @@
 import * as React from 'react'
-import { useEffect , useState} from 'react'
+
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useSelector } from 'react-redux'
 
-
-import { RequestApiQuestion, RequestApiListLesson, RequestApiCategory } from '../../../actions/index'
+import { RequestApiQuestion ,RequestApiQuestionDELETE } from '../../../actions/index'
 import { useDispatch } from "react-redux";
-
+import './styles.scss'
 
 const QuestionDetails : React.FC = () =>{
-
+    const dispatch = useDispatch();
     const router = useRouter()
     const _id = Number(router.query.id);
-    // const [questionData , setQuestionData] = useState(Array)
-    
+
     const questionData = useSelector((state:any) => state.questions);
-    console.log("reduxQuestionsAll", questionData)
 
-
-    const dispatch = useDispatch();
     useEffect(() => {
-        // You can await here
-            dispatch(RequestApiQuestion())
+        dispatch(RequestApiQuestion())
     }, [dispatch])
 
     return (
@@ -30,25 +25,27 @@ const QuestionDetails : React.FC = () =>{
                 questionData && questionData?.map((item:any,index:number)=>{
                     if(item.id === _id)
                         return (
-                            <div key={index}>
-                            <div >{index}:{item.question}</div>
-                            <div>
-                                <h2>Answers:{index} </h2>
-                                {
-                                    item.answers.map((itemAns,idx:number)=>{
-                                        return (
-                                            <div className="wapper__answers">
-                                                <div className="radio">
-                                                    <span className={!itemAns.isCorrect ? "circle" : "circle radioActive"}></span>
+                            <div className="form-answers" key={index}>
+                                <div >
+                                    <p className="quiz-name">{index + 1} . {item.question}</p>
+                                </div>
+                                <div className="quiz-answers">
+                                    {
+                                        item.answers.map((itemAns,idx:number)=>{
+                                            return (
+                                                <div key={idx} className="wapper__answers">
+                                                    <div className="radio">
+                                                        <span className={!itemAns.isCorrect ? "circle" : "circle radioActive"}></span>
+                                                    </div>
+                                                    <p>Answers: {itemAns.content}</p>
                                                 </div>
-                                                <p>ans:{itemAns.content}</p>
-                                                <p>isCorrect:{`${itemAns.isCorrect}`}</p>
-                                            </div>
-                                        )
-                                    })
-                                }
+                                            )
+                                        })
+                                    }
+                                </div>
+                                <button onClick={()=> dispatch(RequestApiQuestionDELETE(item.id))} className="btn btn-success mr-3">Delete</button>
+                                <button onClick={()=> router.push(`/questiondetails/edit/${item.id}`)} className="btn btn-warning">Edit</button>
                             </div>
-                        </div>
                         )
                 })
             }

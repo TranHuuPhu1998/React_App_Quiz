@@ -1,8 +1,9 @@
 import * as React from 'react';
-import  ListLesson  from "./listLesson/index"
+
 import { RequestApiQuestion, RequestApiListLesson, RequestApiCategory } from '../actions/index'
 import { useDispatch } from "react-redux";
 import { useEffect } from 'react'
+import AddQuestion from './addquestion';
 
 const Home:React.FC =()=>{
   const dispatch = useDispatch();
@@ -10,14 +11,14 @@ const Home:React.FC =()=>{
       // You can await here
           dispatch(RequestApiListLesson());
           dispatch(RequestApiCategory());
-          dispatch(RequestApiQuestion())
+          // dispatch(RequestApiQuestion())
   }, [dispatch])
 
   return (
     <>
       <main>
         <div className="main">
-          <ListLesson/>
+            <AddQuestion/>
         </div>
       </main>
     </>
