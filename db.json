@@ -1,61 +1,31 @@
 {
   "questions": [
     {
-      "question": "javascript basic",
-      "answers": [
-        {
-          "id": 0,
-          "content": "javascript basic 1",
-          "isCorrect": false
-        },
-        {
-          "id": 1,
-          "content": "javascript basic 2",
-          "isCorrect": false
-        },
-        {
-          "id": 2,
-          "content": "javascript basic 3",
-          "isCorrect": true
-        }
-      ],
+      "question": "9+1=?",
       "category": "JavaScript Basic",
-      "id": 19
-    },
-    {
-      "question": "1+4=?",
       "answers": [
         {
           "id": 0,
-          "content": "5",
-          "isCorrect": true
+          "content": "123666"
         },
         {
           "id": 1,
-          "content": "6",
-          "isCorrect": false
+          "content": "222444"
         },
         {
           "id": 2,
-          "content": "7",
-          "isCorrect": false
-        },
-        {
-          "id": 3,
-          "content": "8",
-          "isCorrect": false
+          "content": "333666"
         }
       ],
-      "category": "JavaScript OPP",
-      "id": 22
+      "id": 31
     },
     {
-      "question": "1+1=?",
+      "question": "tranhuuphu",
       "answers": [
         {
           "id": 0,
           "content": "123",
-          "isCorrect": true
+          "isCorrect": false
         },
         {
           "id": 1,
@@ -65,33 +35,33 @@
         {
           "id": 2,
           "content": "333",
-          "isCorrect": false
+          "isCorrect": true
         }
       ],
       "category": "JavaScript OPP",
-      "id": 23
+      "id": 32
     },
     {
-      "question": "9+10=?",
+      "question": "tranhuuphu 3555",
       "answers": [
         {
           "id": 0,
-          "content": "19",
-          "isCorrect": true
+          "content": "123666",
+          "isCorrect": false
         },
         {
           "id": 1,
-          "content": "111",
+          "content": "222444",
           "isCorrect": false
         },
         {
           "id": 2,
-          "content": "22",
-          "isCorrect": false
+          "content": "333666",
+          "isCorrect": true
         }
       ],
-      "category": "State and Props",
-      "id": 31
+      "category": "JavaScript OPP",
+      "id": 33
     }
   ],
   "listlesson": [

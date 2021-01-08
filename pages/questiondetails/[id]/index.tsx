@@ -29,6 +29,9 @@ const QuestionDetails : React.FC = () =>{
                                 <div >
                                     <p className="quiz-name">{index + 1} . {item.question}</p>
                                 </div>
+                                <div className="category-name">
+                                    <p>Category : {item.category}</p>
+                                </div>
                                 <div className="quiz-answers">
                                     {
                                         item.answers.map((itemAns,idx:number)=>{

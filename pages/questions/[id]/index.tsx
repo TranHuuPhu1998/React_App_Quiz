@@ -23,8 +23,6 @@ const Questions : React.FC = ()=>{
     const dispatch = useDispatch()
     const notificationSystem:any = React.createRef();
     
-    // const reduxQuestionsAll = useSelector((state:any) => state.questions);
-
     const checkAnswers = (value : any ,id:number ) =>{
         setIsClickAnswers(id)
         setIsCheckAnswers(value.id)

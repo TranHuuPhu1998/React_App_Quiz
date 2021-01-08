@@ -23,7 +23,7 @@ export const RequestApiQuestion = () =>{
     }
 }
 
-//--------POST--------//
+//----POST----//
 
 export const GetDataRequestApiQuestionPOST = (data) =>{
     return {
@@ -44,11 +44,11 @@ export const RequestApiQuestionPOST = (data) =>{
     }
 }
 
-//--------PATCH-----------//
+//----PATCH----//
 
 export const GetDataRequestApiQuestionPUT = (data) =>{
     return {
-        type: Types.ACTION_ADD_QUESTION,
+        type: Types.ACTION_EDIT_QUESTION,
         payload: {
             data
         }
@@ -57,15 +57,16 @@ export const GetDataRequestApiQuestionPUT = (data) =>{
 
 export const RequestApiQuestionPUT = (data) =>{
     return dispatch => {
-        return callApi(`questions/${data.id}` , 'PUT',data).then((res:any) =>{
-            if(res.state === 200){
+        return callApi(`questions/${data.id}`,'PATCH',data).then((res:any) =>{
+            if(res.status === 200){
                 dispatch(GetDataRequestApiQuestionPUT(data))
+                console.log(GetDataRequestApiQuestionPUT(data))
             }
         })
     }
 }
 
-//--------DELETE----------//
+//----DELETE----//
 
 export const GetDataRequestApiQuestionDELETE = (id) =>{
     return {
@@ -101,9 +102,7 @@ export const GetDataRequestApiListLesson = (data)=> {
 
 export const RequestApiListLesson = () =>{
     return dispatch => {
-     
         return callApi('listlesson' , 'GET' , null).then((res:any)=>{
-            // console.log("RequestApiListLesson -> res", res)
             if(res.data){
                 dispatch(GetDataRequestApiListLesson(res.data));
             }

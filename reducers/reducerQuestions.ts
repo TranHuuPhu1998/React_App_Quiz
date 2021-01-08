@@ -25,8 +25,14 @@ const myReducer = (state = initialState, action:any) =>{
                 ...state,
             ]
         case Types.ACTION_DELETE_QUESTION:
-            const index = findindex(action.payload.id , state)
-            state.splice(index,1)
+            const _index = findindex(action.payload.id , state)
+            state.splice(_index,1)
+            return [
+                ...state
+            ]
+        case Types.ACTION_EDIT_QUESTION:
+            const idx = findindex(action.payload.data.id , state)
+            state[idx] = action.payload.data
             return [
                 ...state
             ]

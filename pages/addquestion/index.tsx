@@ -28,7 +28,9 @@ const AddQuestion : React.FC = () =>{
             arrTemp1.push(el.data_id)
             return 0;
         })
+        
         arrTemp1 = Array.from(new Set(arrTemp1))
+
         arrTemp1.forEach((el2:any,idex:number) => { 
             rs.forEach((el,index)=>{
                 if(el2 === el.data_id){
@@ -151,10 +153,11 @@ const AddQuestion : React.FC = () =>{
                         Thêm Đáp án
                     </div >
         
-                    <label htmlFor="" className="form-label gray  ">Nhập đáp án đúng:</label>
+                    <label htmlFor="" className="form-label gray">Nhập đáp án đúng:</label>
                     <input 
                         className="form-control" 
-                        type="text" name="quizCorrect" 
+                        type="text" 
+                        name="quizCorrect" 
                         onChange={handleChangeCorrect} />
                     <input className="btn btn-primary mt-4" type="submit" value="submit" />
                 </form>
