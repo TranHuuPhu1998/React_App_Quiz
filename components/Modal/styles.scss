@@ -1,0 +1,37 @@
+.category-modal{
+    top: 40%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 35%;
+}
+
+.modal-wapper{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+.modal-close{
+    display: none;
+}
+.modal-show{
+    display: block;
+}
+.modal-btn-close{
+    display: flex;
+    justify-content: space-between;
+    label:nth-child(1){
+        font-size: 35px;
+        color: blueviolet;
+        line-height: 0.5;
+        padding-top: 5px;
+    }
+    label:nth-child(2){
+        font-size: 20px;
+        padding: 3px 12px;
+        background-color:rgb(102, 60, 60);
+        color: aliceblue;
+    }
+}

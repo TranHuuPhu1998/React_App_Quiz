@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import { useSelector } from 'react-redux'
 import { RequestApiQuestion } from '../../actions/index'
 
-import callAPI from '../../util'
 import './styles.scss'
 
 const AllQuestion : React.FC = () =>{
@@ -18,14 +17,19 @@ const AllQuestion : React.FC = () =>{
 
     return (
         <div className="quiz-wapper">
-            <Link href="/">Add Question</Link>
+            <div className="quiz-add">
+                <Link  href="/">Add Question</Link>
+            </div>
+            <div className="quiz-allquestions">
+                ALL QUESTIONS
+            </div>
             {
                 questionsData && questionsData?.map((item:any,index:number)=>{
                    return (
                     <div key={index} >
-                    <Link href={`/questiondetails/${item.id}`}>
-                        <a>{index+1}:{item.question}</a> 
-                    </Link>
+                        <Link href={`/questiondetails/${item.id}`}>
+                            <a className="quiz-question">{index+1}:{item.question}</a> 
+                        </Link>
                     </div>
                    )
                 })

@@ -7,6 +7,9 @@ const myReducer = (state = initialState, action:any) =>{
         case Types.REQUEST_API_LISTLESSON:
             state = action.payload.data
             return [...state]; 
+        case Types.ACTION_ADD_LESSON:
+            state.push(action.payload.data)
+            return [...state]
         default:
             return [
                 ...state

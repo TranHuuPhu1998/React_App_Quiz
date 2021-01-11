@@ -11,7 +11,7 @@ const Home:React.FC =()=>{
       // You can await here
           dispatch(RequestApiListLesson());
           dispatch(RequestApiCategory());
-          // dispatch(RequestApiQuestion())
+          dispatch(RequestApiQuestion())
   }, [dispatch])
 
   return (

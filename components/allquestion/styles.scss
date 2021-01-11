@@ -24,3 +24,35 @@
 .radioActive{
     background-color: red;
 }
+.quiz-add{
+    background-color: rgb(44, 42, 42);
+    padding: 12px 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 10px 20px;
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+.quiz-question{
+    padding: 10px 20px;
+    background-color: aliceblue;
+    color: black;
+    border-bottom: 1px solid black;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    a{
+        color: rgb(20, 19, 19);
+        text-decoration: none;
+    }
+}
+.quiz-allquestions{
+    background-color: rgb(41, 66, 112);
+    color: white;
+    text-align: center;
+}

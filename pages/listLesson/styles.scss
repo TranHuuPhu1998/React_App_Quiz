@@ -11,6 +11,7 @@
     border: 1px solid #2a3cad;
     margin: 10px;
     border-radius: 16px;
+    position: relative;
 }
 .box{
     padding: 20px;
@@ -32,14 +33,14 @@
 }
 .lesson_btn{
     padding: 5px 30px 5px 30px;
-    background-color: darkturquoise;
+    background-color: rgb(59, 59, 128);
     border: 1px solid #2a3cad;
     border-radius: 4px;
     margin-top: 20px;
     color: white;
 }
 .lesson_btn:hover{
-    background-color: #cccccc;
+    background-color: rgb(42, 42, 70);
 }
 .les-discription{
     padding-bottom: 20px;
@@ -51,6 +52,28 @@
     margin-left: 20px;
     color: #3b3c54;
     font-weight: bold;
+}
+.not-released::after{
+    content: "not realeased";
+    position: absolute;
+    width: 23%;
+    height: 20px;
+    background-color: red;
+    padding: -3px;
+    top: 25px;
+    right: 18px;
+    font-size: 16px;
+    color: aliceblue;
+}
+.btn-active{
+    pointer-events: none;
+    background-color: #cccccc;
+}
+
+@media (max-width: 1158px){
+    .background-img{
+        width: 100%;
+    }
 }
 
 @media (max-width: 767px){

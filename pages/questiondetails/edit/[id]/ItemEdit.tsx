@@ -7,8 +7,9 @@ interface Props {
     answersProps: any,
     item: any,
     question: any,
-    onEditQuestion : (e ,quizdata ,quizName,category,answersProps) => void,
-    handleChangeAnswers : (e) => void
+    onEditQuestion : (e ,quizdata ,quizName,category,answersProps,icorrect) => void,
+    handleChangeAnswers : (e) => void,
+    onHandleChangeIsCorrect : (quizdata, quizName ,category ,answersProps,answers) => void
 }
 
 const EditQuestionItem: React.FC<Props> = ({
@@ -18,11 +19,13 @@ const EditQuestionItem: React.FC<Props> = ({
     item,
     question,
     onEditQuestion,
-    handleChangeAnswers
+    handleChangeAnswers,
+    onHandleChangeIsCorrect,
 }) => {
 
     const [quizName, setQuizName] = useState(String)
     const [category, setCategory] = useState(String)
+    const [icorrect, setIcorrect] = useState(Boolean)
 
     useEffect(() => {
         setCategory(categoryProps)
@@ -60,20 +63,24 @@ const EditQuestionItem: React.FC<Props> = ({
                     return (
                         <div key={index}>
                             <label htmlFor="">Đáp án {index + 1}</label>
-                            <input
-                                type="text"
-                                name="answers"
-                                id={`content${index}`}
-                                className="form-control"
-                                defaultValue={item2.content}
-                                onChange={handleChangeAnswers}
-                            />
-                            <label htmlFor="">{item2.isCorrect}</label>
+                            <div className="d-flex">
+                                <input
+                                    type="text"
+                                    name="answers"
+                                    id={`content${index}`}
+                                    className="form-control input-answer"
+                                    defaultValue={item2.content}
+                                    onChange={handleChangeAnswers}
+                                />
+                
+                                <p onClick={()=>onHandleChangeIsCorrect(item, quizName,category , answersProps,item2)} className={item2.isCorrect ? "check":"notCheck"}>
+                                </p>
+                            </div>
                         </div>
                     )
                 })
             }
-            <button onClick={(e) => onEditQuestion(e, item ,quizName,category,answersProps)} className="btn btn-success">submit</button>
+            <button onClick={(e) => onEditQuestion(e, item ,quizName,category,answersProps,icorrect)} className="btn btn-success mt-3">submit</button>
         </div>
     )
 }

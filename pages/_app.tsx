@@ -6,8 +6,6 @@ import { Footer } from "../components/Footer"
 
 import {Provider} from 'react-redux'
 import {createWrapper} from 'next-redux-wrapper';
-
-
 import { useStore } from '../store/store'
 
 import './index.scss'
@@ -35,10 +33,11 @@ const CustomApp: React.FC<AppProps> = ({Component , pageProps}) => {
             <NavQuiz/>
             <div className="app-wapper">
                 <Component {...pageProps}/>
+                <Footer/>
             </div>
             
         </div>
-        <Footer/>
+        
         </div>
         </Provider>
     )

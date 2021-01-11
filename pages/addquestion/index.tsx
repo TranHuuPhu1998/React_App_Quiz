@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import { RequestApiListLesson, RequestApiQuestionPOST } from '../../actions/index'
 import { useDispatch } from "react-redux";
 
+import './styles.scss'
 let rs:any[] = []
 
 const AddQuestion : React.FC = () =>{
@@ -100,7 +101,7 @@ const AddQuestion : React.FC = () =>{
                 <form className="form-addquestion" onSubmit={onSaveAns} >
                 <div>
                     <div>
-                    <label className="form-label gray " htmlFor="">Chọn category</label>
+                    <label className="form-label gray" htmlFor="">Chọn category</label>
                     <select 
                         className="form-control" 
                         name="category" 
@@ -111,8 +112,8 @@ const AddQuestion : React.FC = () =>{
                     {
                     
                         listLesson.map((item:any , index)=>{
-                            return (
-                                <option key={index} value={item.category}>{item.category}</option>
+                            return (      
+                                item.released ? <option key={index} value={item.category}>{item.category}</option> : ""
                             )
                         })
                     }

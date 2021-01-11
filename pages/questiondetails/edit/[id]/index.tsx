@@ -26,7 +26,7 @@ const EditQuestion : React.FC = () => {
         dispatch(RequestApiListLesson())
     }, [])
 
-    const onEditQuestion = (e: React.FormEvent, quizdata:any , quizName ,category,answersProps) =>{
+    const onEditQuestion = (e: React.FormEvent, quizdata:any , quizName ,category,answersProps,icorrect) =>{
        
         e.preventDefault();
         
@@ -56,6 +56,8 @@ const EditQuestion : React.FC = () => {
                 }
             })
         });
+
+
         var data = {
             "question" : quizName,
             "answers" : answersProps,
@@ -63,9 +65,9 @@ const EditQuestion : React.FC = () => {
             "category" : category
         }   
         
-        console.log("onEditQuestion -> data", data)
         dispatch(RequestApiQuestionPUT(data))
     }
+
     const handleChangeAnswers = (e : any) => {
         var obj = {
                 content : e.currentTarget.value,
@@ -73,7 +75,26 @@ const EditQuestion : React.FC = () => {
         }
         rs.push(obj)
     }
-   
+    
+    const onHandleChangeIsCorrect = (quizdata ,quizName,category, answersProps , icorrect) => {
+
+        answersProps.forEach((element:any,index:number) => {
+            element.isCorrect = false
+            if(element.content === icorrect.content){
+                element.isCorrect = true
+            }
+        });
+
+        var data = {
+            "question" : quizName,
+            "answers" : answersProps,
+            "id" : quizdata.id,
+            "category" : category
+        }   
+        
+        dispatch(RequestApiQuestionPUT(data))
+    }
+
     return (
         <div>
             <p className="edit-question">EDIT QUESTIONS</p>
@@ -90,6 +111,8 @@ const EditQuestion : React.FC = () => {
                                 answersProps = {item.answers}
                                 onEditQuestion = {onEditQuestion}
                                 handleChangeAnswers = {handleChangeAnswers}
+                                onHandleChangeIsCorrect = {onHandleChangeIsCorrect}
+                            
                             />
                         )
                     }

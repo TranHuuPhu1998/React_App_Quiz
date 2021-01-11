@@ -111,6 +111,28 @@ export const RequestApiListLesson = () =>{
     }
 }
 
+//------POST--------//
+
+export const GetDataRequestApiListLessonPOST = (data) =>{
+    return {
+        type: Types.ACTION_ADD_LESSON,
+        payload:{
+            data
+        }
+    };
+}
+
+export const RequestApiListLessonPOST = (data) =>{
+    return dispatch => {
+        return callApi('listlesson' , 'POST' , data).then((res:any)=>{
+            if(res.data){
+                dispatch(GetDataRequestApiListLessonPOST(res.data));
+            }
+        })
+        
+    }
+}
+
 //------------------CATEROGY-----------------------//
 
 export const GetDataRequestApiCaterory = (data)=> {
@@ -132,3 +154,4 @@ export const RequestApiCategory = () =>{
         
     }
 }
+
