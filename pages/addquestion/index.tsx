@@ -102,21 +102,27 @@ const AddQuestion : React.FC = () =>{
                 <div>
                     <div>
                     <label className="form-label gray" htmlFor="">Chọn category</label>
-                    <select 
-                        className="form-control" 
-                        name="category" 
-                        id="categoryid"
-                        onChange={(e)=>setCategory(e.currentTarget.value)}
-                        >
-                    <option defaultValue="Choose">Choose...</option>
-                    {
-                        listLesson.map((item:any , index)=>{
-                            return (      
-                                item.released ? <option key={index} value={item.category}>{item.category}</option> : ""
-                            )
-                        })
-                    }
-                    </select>
+
+                    <div className="input-group mb-3">
+                        <div className="input-group">
+                            <select 
+                            className="custom-select" 
+                            name="category" 
+                            id="categoryid"
+                            onChange={(e)=>setCategory(e.currentTarget.value)}
+                            >
+                            <option defaultValue="Choose">Choose...</option>
+                            {
+                                listLesson.map((item:any , index)=>{
+                                    return (      
+                                        item.released ? <option key={index} value={item.category}>{item.category}</option> : ""
+                                    )
+                                })
+                            }
+                            </select>
+                        </div>
+                    </div>
+
                     </div>
 
                 <label className="form-label gray " htmlFor="quizname">Nhận nội dung câu hỏi:</label>
