@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles.scss'
-import AllQuestion from '../allquestion/index'
+import AllQuestion from '../Allquestion/index'
 
 const NavQuiz = () => {
     return (

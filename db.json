@@ -142,8 +142,8 @@
     {
       "id": 1,
       "released": true,
-      "category": "JavaScript Basic",
-      "name": "JavaScript",
+      "category": "JavaScript Basissss",
+      "name": "ReactJS",
       "discriptions": "JavaScript là ngôn ngữ lập trình phổ biến nhất trên thế giới trong suốt 20 năm qua. Nó cũng là một trong số 3 ngôn ngữ chính của lập trình web"
     },
     {
@@ -154,17 +154,17 @@
       "discriptions": "English is a West Germanic language first spoken in early medieval England which eventually became the leading language of international discourse in today's world."
     },
     {
-      "id": 3,
       "released": true,
-      "category": "State and Props",
-      "name": "ReactJS",
-      "discriptions": "JavaScript là ngôn ngữ lập trình phổ biến nhất trên thế giới trong suốt 20 năm qua. Nó cũng là một trong số 3 ngôn ngữ chính của lập trình web"
+      "category": "vocabulary 333",
+      "name": "English",
+      "discriptions": "vocabulary 888",
+      "id": 13
     },
     {
       "id": 4,
       "released": false,
       "category": "Vocabulary 1",
-      "name": "English",
+      "name": "ReactJS",
       "discriptions": "English is a West Germanic language first spoken in early medieval England which eventually became the leading language of international discourse in today's world."
     },
     {
@@ -175,67 +175,39 @@
       "discriptions": "ReactJS."
     },
     {
-      "id": 6,
-      "released": false,
-      "category": "Vocabulary 2",
-      "name": "English",
-      "discriptions": "English is a West Germanic language first spoken in early medieval England which eventually became the leading language of international discourse in today's world."
-    },
-    {
       "released": true,
-      "category": "vocalulary 3",
+      "category": "vocabulary 222",
       "name": "English",
-      "discriptions": "Learning vocabulary 3",
-      "id": 7
-    },
-    {
-      "released": true,
-      "category": "vocalulary 4",
-      "name": "English",
-      "discriptions": "vocalulary 3 444",
-      "id": 8
-    },
-    {
-      "released": true,
-      "category": "vocalulary 4",
-      "name": "English",
-      "discriptions": "vocalulary 3 444",
-      "id": 9
-    },
-    {
-      "isReleased": false,
-      "category": "vocabulary 888",
-      "subject": "JavaScript",
-      "discriptions": "aaaaaaaaaaa",
-      "id": 10
-    },
-    {
-      "isReleased": true,
-      "category": "vocabulary 444",
-      "subject": "English",
-      "discriptions": "vocabulary 444",
-      "id": 11
-    },
-    {
-      "isReleased": false,
-      "category": "vocabulary 333",
-      "subject": "English",
-      "discriptions": "vocabulary 333",
-      "id": 12
-    },
-    {
-      "isReleased": true,
-      "category": "vocabulary 111",
-      "subject": "English",
-      "discriptions": "vocabulary 888",
-      "id": 13
-    },
-    {
-      "isReleased": true,
-      "category": "vocabulary 999",
-      "subject": "English",
-      "discriptions": "vocabulary 999",
+      "discriptions": "vocabulary 222",
       "id": 14
+    },
+    {
+      "id": 15,
+      "released": true,
+      "category": "vocabulary 33aaaaaaa",
+      "name": "JavaScript",
+      "discriptions": "JavaScript là ngôn ngữ lập trình phổ biến nhất trên thế giới trong suốt 20 năm qua. Nó cũng là một trong số 3 ngôn ngữ chính của lập trình web"
+    },
+    {
+      "id": 16,
+      "released": true,
+      "category": "vocabulary 333",
+      "name": "JavaScript",
+      "discriptions": "JavaScript là ngôn ngữ lập trình phổ biến nhất trên thế giới trong suốt 20 năm qua. Nó cũng là một trong số 3 ngôn ngữ chính của lập trình web"
+    },
+    {
+      "id": 17,
+      "released": true,
+      "category": "vocabulary 888",
+      "name": "",
+      "discriptions": "vocabulary 888"
+    },
+    {
+      "id": 18,
+      "released": true,
+      "category": "aaaaaaaa",
+      "name": "",
+      "discriptions": "English is a West Germanic language first spoken in early medieval England which eventually became the leading language of international discourse in today's world."
     }
   ],
   "category": [

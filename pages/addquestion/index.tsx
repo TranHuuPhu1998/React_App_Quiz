@@ -110,7 +110,6 @@ const AddQuestion : React.FC = () =>{
                         >
                     <option defaultValue="Choose">Choose...</option>
                     {
-                    
                         listLesson.map((item:any , index)=>{
                             return (      
                                 item.released ? <option key={index} value={item.category}>{item.category}</option> : ""
@@ -160,7 +159,7 @@ const AddQuestion : React.FC = () =>{
                         type="text" 
                         name="quizCorrect" 
                         onChange={handleChangeCorrect} />
-                    <input className="btn btn-primary mt-4" type="submit" value="submit" />
+                    <input className="btn btn-primary mt-4 mb-4" type="submit" value="submit" />
                 </form>
             </div>
             

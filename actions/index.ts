@@ -133,6 +133,48 @@ export const RequestApiListLessonPOST = (data) =>{
     }
 }
 
+//------DELETE--------//
+
+export const GetDataRequestApiListLessonDELETE = (id) =>{
+    return {
+        type : Types.ACTION_DELETE_LESSON,
+        payload : {
+            id
+        }
+    }
+}
+
+export const RequestApiListLessonDELETE = (id) =>{
+    return dispatch => {
+        return callApi(`listlesson/${id}` ,'DELETE' , null).then((res:any) =>{
+            if(res.status === 200){
+                dispatch(GetDataRequestApiListLessonDELETE(id))
+            }
+        })
+    }
+}
+
+//----PATCH----//
+
+export const GetDataRequestApiListLessonPATCH = (data) =>{
+    return {
+        type: Types.ACTION_EIDT_LESSON,
+        payload: {
+            data
+        }
+    };
+}
+
+export const RequestApiListLessonPATCH = (data) =>{
+    return dispatch => {
+        return callApi(`listlesson/${data.id}`,'PATCH',data).then((res:any) =>{
+            if(res.status === 200){
+                dispatch(GetDataRequestApiListLessonPATCH(data))
+            }
+        })
+    }
+}
+
 //------------------CATEROGY-----------------------//
 
 export const GetDataRequestApiCaterory = (data)=> {
