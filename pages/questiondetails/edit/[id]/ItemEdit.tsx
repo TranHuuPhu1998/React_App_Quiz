@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import classes from '../../styles.scss'
 
 interface Props {
     categoryProps: any,
@@ -33,7 +34,7 @@ const EditQuestionItem: React.FC<Props> = ({
     }, [])
 
     return (
-        <div className="form-addquestion">
+        <div className={classes.form_addquestion}>
             <label className="form-label gray" htmlFor="quizname">Nội dung câu hỏi:</label>
             <input
                 type="text"
@@ -68,12 +69,12 @@ const EditQuestionItem: React.FC<Props> = ({
                                     type="text"
                                     name="answers"
                                     id={`content${index}`}
-                                    className="form-control input-answer"
+                                    className={"form-control"+" "+classes.input_answer}
                                     defaultValue={item2.content}
                                     onChange={handleChangeAnswers}
                                 />
                 
-                                <p onClick={()=>onHandleChangeIsCorrect(item, quizName,category , answersProps,item2)} className={item2.isCorrect ? "check":"notCheck"}>
+                                <p onClick={()=>onHandleChangeIsCorrect(item, quizName,category , answersProps,item2)} className={item2.isCorrect ? classes.check: classes.notCheck}>
                                 </p>
                             </div>
                         </div>

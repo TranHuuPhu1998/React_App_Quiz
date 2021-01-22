@@ -1,13 +1,12 @@
-.app-wapper{
+.app_wapper{
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     max-width: 1200px;
     background-color: azure;
-    height: 100%;
 }
-.app-main{
+.app_main{
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
@@ -17,10 +16,10 @@
 }
 
 @media (max-width:767px){
-    .app-main{
+    .app_main{
         height: 100%;
     }
-    .app-wapper{
+    .app_wapper{
         padding: 1rem;
     }
 }

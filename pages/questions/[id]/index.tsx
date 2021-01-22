@@ -6,7 +6,7 @@ import NotificationSystem from 'react-notification-system';
 import { useRouter } from 'next/router'
 import CallApi from '../../../util/index'
 
-import './styles.scss' 
+import classes from './styles.scss' 
 
 const Questions : React.FC = ()=>{
     const [isCheckAnswers , setIsCheckAnswers] = useState(Number)
@@ -74,12 +74,12 @@ const Questions : React.FC = ()=>{
 
     
     return (
-        <div className="quiz-wapper">
+        <div className={classes.quiz_wapper}>
             <NotificationSystem ref={notificationSystem} />
-            <p className="quiz__category">Leaning {router.query.id}</p>
-            <div className="absolute-bg"> 
-            <div className="bg-info total__wapper">
-                <div className="total__answers" style={{width:`${widht_css}%`}}></div>
+            <p className={classes.quiz__category}>Leaning {router.query.id}</p>
+            <div className={classes.absolute_bg}> 
+            <div className={classes.bg_info+" "+classes.total__wapper}>
+                <div className={classes.total__answers} style={{width:`${widht_css}%`}}></div>
             </div>
             {
                 questionsAll?.map((item : any,index :number)=>{
@@ -87,13 +87,13 @@ const Questions : React.FC = ()=>{
                     {
                         return (
                             <div key={index} 
-                                className="absolute-bg wapper">
-                                <h1 className="quiz-index mt-3 mb-3">Question {index + 1} of {questionsAll.length}</h1>
-                                <pre className="quiz-itemquestion border border-primary">
+                                className={classes.absolute_bg+" "+classes.wapper}>
+                                <h1 className={classes.quiz_index+" "+"mt-3 mb-3"}>Question {index + 1} of {questionsAll.length}</h1>
+                                <pre className={classes.quiz_itemquestion+" "+"border border-primary"}>
                                     <p>{index + 1} . {item.question}</p>
                                 </pre>
                                 <p className="text-center text-success mt-4 mb-4">Choose The Coorect Answers</p>
-                                <div className="list_answers">
+                                <div className={classes.list_answers}>
                                 {
                                     item.answers.map((value :any, idex :number) => {
                                         return (
@@ -103,7 +103,7 @@ const Questions : React.FC = ()=>{
                                             className={isCheckAnswers === value.id && isClickAnswers === item.id ? "answers acvive" : "answers"}
                                         >   
                                             <p className="d-flex justify-content-start align-items-center">
-                                                <span className="answers__icon">{String.fromCharCode(65 + idex)}</span>
+                                                <span className={classes.answers__icon}>{String.fromCharCode(65 + idex)}</span>
                                                 <span className="d-block">{value.content}</span>
                                             </p>
                                         </div>
@@ -111,9 +111,9 @@ const Questions : React.FC = ()=>{
                                     })
                                 }
                                 </div>
-                                <div className="quiz--btn">
-                                    <button className="submit" onClick={()=>onResultAnswers(item.id)}>Submit</button>
-                                    <button className={isClick === true ? "submit" : "submit js-pointer-events"} onClick={()=>onNextAnswers(item.id)}>Next</button>
+                                <div className={classes.quiz__btn}>
+                                    <button className={classes.submit} onClick={()=>onResultAnswers(item.id)}>Submit</button>
+                                    <button className={isClick === true ? classes.submit : classes.submit+" "+"js-pointer-events"} onClick={()=>onNextAnswers(item.id)}>Next</button>
                                 </div>
                             </div>
                         )
@@ -122,7 +122,7 @@ const Questions : React.FC = ()=>{
                 })
             }
             { 
-              questionsAll && lengthQuestion === questionsAll.length ? <div className="res">Chúc mừng bạn đả hoàn thành {totalCorrect} câu hỏi đúng.</div>:<div></div>
+              questionsAll && lengthQuestion === questionsAll.length ? <div className={classes.res}>Chúc mừng bạn đả hoàn thành {totalCorrect} câu hỏi đúng.</div>:<div></div>
             }
             </div>
         </div>

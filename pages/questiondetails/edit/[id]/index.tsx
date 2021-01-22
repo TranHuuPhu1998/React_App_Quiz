@@ -3,7 +3,7 @@ import {useState,useEffect} from 'react'
 import {useRouter} from 'next/router'
 import {useSelector} from 'react-redux'
 import {useDispatch} from 'react-redux'
-import './styles.scss'
+import classes from  '../../styles.scss'
 
 import { RequestApiQuestionPUT , RequestApiListLesson } from '../../../../actions/index'
 import EditQuestionItem from './ItemEdit'
@@ -96,8 +96,8 @@ const EditQuestion : React.FC = () => {
     }
 
     return (
-        <div>
-            <p className="edit-question">EDIT QUESTIONS</p>
+        <div className={classes.wapper_edit}>
+            <p className={classes.edit_question}>EDIT QUESTIONS</p>
             {
                 questionData && questionData?.map((item:any , index:number) =>{
                     if(item.id === _id){

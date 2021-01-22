@@ -48,17 +48,17 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.quiz-wapper{
+.quiz_wapper{
     color: rgb(71, 55, 55);
-    margin-top: 40px;
+    padding: 20px;
 }
-.quiz-index{
+.quiz_index{
     color: darkblue;
     font-weight: bold;
     font-size: 30px;
     text-align: center;
 }
-.quiz-itemquestion{
+.quiz_itemquestion{
     padding: 30px;
     background-color: white;
     color: rgb(26, 24, 24);
@@ -101,7 +101,7 @@
     font-weight: bold;
     font-size: 25px;
 }
-.quiz--btn{
+.quiz__btn{
     text-align: right;
     button:nth-child(1){
         margin-right: 20px;
@@ -122,13 +122,13 @@
         margin: 11px;
         padding: 5px 20px;
     }
-    .quiz-itemquestion{
+    .quiz_itemquestion{
         margin: 20px 10px;
     }
     .list_answers{
         margin: 0 10px;
     }
-    .quiz-wapper{
+    .quiz_wapper{
         margin-top: 20px;
     }
 

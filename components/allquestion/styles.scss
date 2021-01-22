@@ -1,14 +1,4 @@
-.radio{
-    width: 25px;
-    height: 25px;
-    border: 1px solid blue;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-}
+
 .wapper__answers{
     display: flex;
     margin-bottom: 20px;
@@ -21,41 +11,50 @@
     border-radius: 50%;
     background-color: white;
 }
-.radioActive{
-    background-color: red;
-}
-.quiz-add{
-    background-color: rgb(44, 42, 42);
-    padding: 12px 40px;
-    display: flex;
-    justify-content: center;
-    border-radius: 30px;
-    margin: 10px 20px;
+
+.quiz_add{
     a{
         text-decoration: none;
         color: white;
         font-size: 20px;
         font-weight: bold;
+        background-color: rgb(44, 42, 42);
+        padding: 12px 40px;
+        display: flex;
+        justify-content: center;
+        border-radius: 30px;
+        margin: 10px 20px;
     }
 }
-.quiz-question{
-    padding: 12px 20px;
+.quiz_question{
+    height: 46px;
     background-color: aliceblue;
     color: black;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rosybrown;
     display: block;
     text-decoration: none;
     cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 20px;
     a{
         color: rgb(20, 19, 19);
         text-decoration: none;
         font-size: 17px;
     }
 }
-.quiz-allquestions{
+.quiz_allquestions{
     background-color: rgb(41, 66, 112);
     color: white;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    display: flex;
+    justify-content: space-around;
+}
+.quiz_sort_name{
+    cursor: pointer;
 }

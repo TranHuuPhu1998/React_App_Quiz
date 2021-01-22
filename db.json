@@ -45,28 +45,6 @@
       "id": 32
     },
     {
-      "question": "tranhuuphu 3555",
-      "answers": [
-        {
-          "id": 0,
-          "content": "123666",
-          "isCorrect": false
-        },
-        {
-          "id": 1,
-          "content": "222444",
-          "isCorrect": true
-        },
-        {
-          "id": 2,
-          "content": "333666",
-          "isCorrect": false
-        }
-      ],
-      "category": "JavaScript OPP",
-      "id": 33
-    },
-    {
       "question": "State and Props ??",
       "answers": [
         {
@@ -136,12 +114,210 @@
       ],
       "category": "Vocabulary 1",
       "id": 36
+    },
+    {
+      "question": "1+1=?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "123",
+          "isCorrect": false
+        },
+        {
+          "id": 1,
+          "content": "2",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "3",
+          "isCorrect": false
+        }
+      ],
+      "category": "JavaScript OPP",
+      "id": 37
+    },
+    {
+      "question": "\"a\"+\"b\"=?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "123ab",
+          "isCorrect": false
+        },
+        {
+          "id": 1,
+          "content": "ab",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "c",
+          "isCorrect": false
+        }
+      ],
+      "category": "aaaaaaaa",
+      "id": 38
+    },
+    {
+      "question": "learning",
+      "answers": [
+        {
+          "id": 0,
+          "content": "học ",
+          "isCorrect": false
+        },
+        {
+          "id": 1,
+          "content": "đang học ",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "học tập",
+          "isCorrect": false
+        }
+      ],
+      "category": "vocabulary 33aaaaaaa",
+      "id": 39
+    },
+    {
+      "question": "My mother is a nurse",
+      "answers": [
+        {
+          "id": 0,
+          "content": "Mẹ tôi là một y tá",
+          "isCorrect": true
+        },
+        {
+          "id": 1,
+          "content": "Mẹ tôi là một bác sĩ",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Mẹ tôi hát rất hay",
+          "isCorrect": false
+        }
+      ],
+      "category": "vocabulary 888",
+      "id": 40
+    },
+    {
+      "question": "Thì hiện tại đơn ,  Công thức với Động từ thường là",
+      "answers": [
+        {
+          "id": 0,
+          "content": "Khẳng định: S + V(s/es) + O",
+          "isCorrect": true
+        },
+        {
+          "id": 1,
+          "content": "Phủ định: S + do/does + V_inf + O",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Nghi vấn: Do/Does + V_inf + O?",
+          "isCorrect": false
+        }
+      ],
+      "category": "Learning English",
+      "id": 41
+    },
+    {
+      "question": "Dịch câu sau đay sang tiếng việt He’s not a bad guy. ",
+      "answers": [
+        {
+          "id": 0,
+          "content": "Anh ấy không phải là một kẻ xấu",
+          "isCorrect": true
+        },
+        {
+          "id": 1,
+          "content": "Anh ấy là phải là một kẻ xấu",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Anh ấy không phải là một người rất tệ",
+          "isCorrect": false
+        }
+      ],
+      "category": "Learning English",
+      "id": 42
+    },
+    {
+      "question": "tranhuuphu",
+      "answers": [
+        {
+          "id": 0,
+          "content": "1111",
+          "isCorrect": false
+        },
+        {
+          "id": 1,
+          "content": "222",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "333",
+          "isCorrect": true
+        }
+      ],
+      "category": "React JS Lever 1",
+      "id": 43
+    },
+    {
+      "question": "tranhuuphu",
+      "answers": [
+        {
+          "id": 0,
+          "content": "1111",
+          "isCorrect": false
+        },
+        {
+          "id": 1,
+          "content": "222",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "333",
+          "isCorrect": true
+        }
+      ],
+      "category": "React JS Lever 1",
+      "id": 44
+    },
+    {
+      "question": "11111111111",
+      "answers": [
+        {
+          "id": 0,
+          "content": "1111",
+          "isCorrect": false
+        },
+        {
+          "id": 1,
+          "content": "222",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "333",
+          "isCorrect": true
+        }
+      ],
+      "category": "React JS Lever 1",
+      "id": 45
     }
   ],
   "listlesson": [
     {
       "id": 1,
-      "released": true,
+      "released": false,
       "category": "JavaScript Basissss",
       "name": "ReactJS",
       "discriptions": "JavaScript là ngôn ngữ lập trình phổ biến nhất trên thế giới trong suốt 20 năm qua. Nó cũng là một trong số 3 ngôn ngữ chính của lập trình web"
@@ -154,20 +330,6 @@
       "discriptions": "English is a West Germanic language first spoken in early medieval England which eventually became the leading language of international discourse in today's world."
     },
     {
-      "released": true,
-      "category": "vocabulary 333",
-      "name": "English",
-      "discriptions": "vocabulary 888",
-      "id": 13
-    },
-    {
-      "id": 4,
-      "released": false,
-      "category": "Vocabulary 1",
-      "name": "ReactJS",
-      "discriptions": "English is a West Germanic language first spoken in early medieval England which eventually became the leading language of international discourse in today's world."
-    },
-    {
       "id": 5,
       "released": false,
       "category": "ReactJS Basic",
@@ -175,7 +337,7 @@
       "discriptions": "ReactJS."
     },
     {
-      "released": true,
+      "released": false,
       "category": "vocabulary 222",
       "name": "English",
       "discriptions": "vocabulary 222",
@@ -184,30 +346,16 @@
     {
       "id": 15,
       "released": true,
-      "category": "vocabulary 33aaaaaaa",
-      "name": "JavaScript",
-      "discriptions": "JavaScript là ngôn ngữ lập trình phổ biến nhất trên thế giới trong suốt 20 năm qua. Nó cũng là một trong số 3 ngôn ngữ chính của lập trình web"
-    },
-    {
-      "id": 16,
-      "released": true,
-      "category": "vocabulary 333",
+      "category": "React JS Lever 1",
       "name": "JavaScript",
       "discriptions": "JavaScript là ngôn ngữ lập trình phổ biến nhất trên thế giới trong suốt 20 năm qua. Nó cũng là một trong số 3 ngôn ngữ chính của lập trình web"
     },
     {
       "id": 17,
       "released": true,
-      "category": "vocabulary 888",
-      "name": "",
+      "category": "Learning English",
+      "name": "English",
       "discriptions": "vocabulary 888"
-    },
-    {
-      "id": 18,
-      "released": true,
-      "category": "aaaaaaaa",
-      "name": "",
-      "discriptions": "English is a West Germanic language first spoken in early medieval England which eventually became the leading language of international discourse in today's world."
     }
   ],
   "category": [

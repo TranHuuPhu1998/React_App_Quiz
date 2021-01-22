@@ -5,7 +5,7 @@ import { useSelector , useDispatch } from "react-redux";
 import Link from 'next/link'
 import { RequestApiCategory , RequestApiListLesson } from '../../actions/index'
 
-import './styles.scss'
+import  classes from './styles.scss'
 
 const ListLesson: React.FC = ({}) => {
 
@@ -35,23 +35,23 @@ const ListLesson: React.FC = ({}) => {
             {category && category?.map((item1: any, index: number) => {
                 return (
                     <div key={index}>
-                        <h1 className="les-title">{index + 1}. {item1.name}</h1>
-                        <div className="lesson-container">
+                        <h1 className={classes.les_title}>{index + 1}. {item1.name}</h1>
+                        <div className={classes.lesson_container}>
                             {listLesson && listLesson?.map((item: any, index: number) => {
                             if ((item1.name === item.name)) {
                                 return (
-                                    <div key={index} className={item.released ? "background-img" : "background-img not-released"}>
-                                        <div className="box">
-                                            <div className="content">
+                                    <div key={index} className={item.released ? classes.background_img : classes.background_img+" "+classes.not_released}>
+                                        <div className={classes.box}>
+                                            <div className={classes.content}>
                                                 <h2>{item.category}</h2>
-                                                <div className="les-discription">
+                                                <div className={classes.les_discription}>
                                                     <p>
                                                         {item.discriptions}
                                                     </p>
                                                 </div>
                                             </div>
                                             <button 
-                                            className={item.released ? "lesson_btn" : "lesson_btn btn-active"} 
+                                            className={item.released ? classes.lesson_btn : classes.lesson_btn+" "+classes.btn_active} 
                                             onClick={() => onLeaning(item.category)}>LEARN</button>
                                         </div>
                                     </div>

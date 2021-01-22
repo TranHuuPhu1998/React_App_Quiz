@@ -17,9 +17,7 @@ const Home:React.FC =()=>{
   return (
     <>
       <main>
-        <div className="main">
             <AddQuestion/>
-        </div>
       </main>
     </>
   )

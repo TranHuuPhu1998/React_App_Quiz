@@ -4,7 +4,8 @@ import { useSelector } from 'react-redux'
 import { RequestApiListLesson, RequestApiQuestionPOST } from '../../actions/index'
 import { useDispatch } from "react-redux";
 
-import './styles.scss'
+import classes from './styles.scss'
+
 let rs:any[] = []
 
 const AddQuestion : React.FC = () =>{
@@ -83,7 +84,7 @@ const AddQuestion : React.FC = () =>{
     const RenderTotalAns = totalAns.map((ele)=>{
         return (
                 <div key={ele}>
-                <label htmlFor="" className="form-label gray ">Đáp án {ele}: </label>
+                <label htmlFor="" className="form-label gray">Đáp án {ele}: </label>
                 <input 
                     type="text"
                     name={ele}
@@ -96,9 +97,9 @@ const AddQuestion : React.FC = () =>{
     return (
         <div className="d-flex">
 
-            <div className="main">
+            <div className={classes.main_addquiz}>
                 <div className="text-center mt-5">AddQuestion</div>
-                <form className="form-addquestion" onSubmit={onSaveAns} >
+                <form className={classes.form_addquestion} onSubmit={onSaveAns} >
                 <div>
                     <div>
                     <label className="form-label gray" htmlFor="">Chọn category</label>
@@ -106,7 +107,7 @@ const AddQuestion : React.FC = () =>{
                     <div className="input-group mb-3">
                         <div className="input-group">
                             <select 
-                            className="custom-select" 
+                            className={classes.custom_select +" "+"form-control"} 
                             name="category" 
                             id="categoryid"
                             onChange={(e)=>setCategory(e.currentTarget.value)}

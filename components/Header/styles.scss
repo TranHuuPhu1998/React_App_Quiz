@@ -1,4 +1,4 @@
-.header-c{
+.header_c{
   display:flex;
   height: 50px;
   &__logo{
@@ -59,8 +59,11 @@
 .menu__icon{
   display: none;
 }
+.menu_main_menu{
+  color: red;
+}
 @media  (max-width:767px){
-  .header-c__text{
+  .header_c__text{
     display: none;
   }
   .menu{

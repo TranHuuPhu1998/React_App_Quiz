@@ -1,5 +1,5 @@
-.category-modal{
-    top: 40%;
+.category_modal{
+    top: 25%;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -7,19 +7,19 @@
     width: 35%;
 }
 
-.modal-wapper{
+.modal_wapper{
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
     padding: 20px;
 }
-.modal-close{
+.modal_close{
     display: none;
 }
-.modal-show{
+.modal_show{
     display: block;
 }
-.modal-btn-close{
+.modal_btn_close{
     display: flex;
     justify-content: space-between;
     label:nth-child(1){
@@ -35,6 +35,6 @@
         color: aliceblue;
     }
 }
-.mr-3{
+.mr_3{
     margin-right: 30px;
 }

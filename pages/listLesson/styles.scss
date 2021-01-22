@@ -1,11 +1,11 @@
-.lesson-container{
+.lesson_container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-right: 10px;
     margin-left: 10px;
 }
-.background-img{
+.background_img{
     background: white;
     width: 47%;
     border: 1px solid #2a3cad;
@@ -42,19 +42,19 @@
 .lesson_btn:hover{
     background-color: rgb(42, 42, 70);
 }
-.les-discription{
+.les_discription{
     padding-bottom: 20px;
     border-bottom: 1px solid #cccccc;
 }
-.les-title{
+.les_title{
     font-size: 40px;
     padding-top: 50px;
     margin-left: 20px;
     color: #3b3c54;
     font-weight: bold;
 }
-.not-released::after{
-    content: "not realeased";
+.not_released::after{
+    content: "Chuẩn bị ra mắt";
     position: absolute;
     width: 23%;
     height: 20px;
@@ -65,19 +65,23 @@
     font-size: 16px;
     color: aliceblue;
 }
-.btn-active{
+.btn_active{
     pointer-events: none;
     background-color: #cccccc;
 }
-
+.category_name{
+    font-size: 30px;
+    color: brown;
+    padding-bottom: 20px;
+}
 @media (max-width: 1158px){
-    .background-img{
+    .background_img{
         width: 100%;
     }
 }
 
 @media (max-width: 767px){
-    .background-img{
+    .background_img{
         width: 100%;
     }
     .menu{

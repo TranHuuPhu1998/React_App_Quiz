@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 
 import { RequestApiQuestion ,RequestApiQuestionDELETE } from '../../../actions/index'
 import { useDispatch } from "react-redux";
-import './styles.scss'
+import classes from '../styles.scss'
 
 const QuestionDetails : React.FC = () =>{
     const dispatch = useDispatch();
@@ -20,25 +20,25 @@ const QuestionDetails : React.FC = () =>{
     }, [dispatch])
 
     return (
-        <div className="quiz-wapper">
+        <div className={classes.quiz_wapper}>
             {
                 questionData && questionData?.map((item:any,index:number)=>{
                     if(item.id === _id)
                         return (
-                            <div className="form-answers" key={index}>
+                            <div className={classes.form_answers} key={index}>
                                 <div >
-                                    <p className="quiz-name">{index + 1} . {item.question}</p>
+                                    <p className={classes.quiz_name}>{index + 1} . {item.question}</p>
                                 </div>
-                                <div className="category-name">
+                                <div className={classes.category_name}>
                                     <p>Category : {item.category}</p>
                                 </div>
-                                <div className="quiz-answers">
+                                <div className={classes.quiz_answers}>
                                     {
                                         item.answers.map((itemAns,idx:number)=>{
                                             return (
-                                                <div key={idx} className="wapper__answers">
-                                                    <div className="radio">
-                                                        <span className={!itemAns.isCorrect ? "circle" : "circle radioActive"}></span>
+                                                <div key={idx} className={classes.wapper__answers}>
+                                                    <div className={classes.radio}>
+                                                        <span className={!itemAns.isCorrect ? classes.circle : classes.circle+" "+classes.radioActive}></span>
                                                     </div>
                                                     <p>Answers: {itemAns.content}</p>
                                                 </div>
@@ -46,7 +46,7 @@ const QuestionDetails : React.FC = () =>{
                                         })
                                     }
                                 </div>
-                                <button onClick={()=> dispatch(RequestApiQuestionDELETE(item.id))} className="btn btn-success mr-3">Delete</button>
+                                <button onClick={()=> dispatch(RequestApiQuestionDELETE(item.id))} className={`btn btn-success m-3`}>Delete</button>
                                 <button onClick={()=> router.push(`/questiondetails/edit/${item.id}`)} className="btn btn-warning">Edit</button>
                             </div>
                         )

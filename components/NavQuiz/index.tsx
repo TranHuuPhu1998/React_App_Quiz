@@ -1,10 +1,11 @@
 import React from 'react'
 import './styles.scss'
 import AllQuestion from '../Allquestion/index'
+import classes from './styles.scss'
 
 const NavQuiz = () => {
     return (
-        <div className="nav-quiz">
+        <div className={classes.nav_quiz}>
             <AllQuestion/>
         </div>
     )
