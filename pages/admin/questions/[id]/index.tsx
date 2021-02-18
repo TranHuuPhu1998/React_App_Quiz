@@ -72,7 +72,6 @@ const Questions : React.FC = ()=>{
 
     let widht_css = (lengthQuestion / questionsAll.length) * 100;
 
-    
     return (
         <div className={classes.quiz_wapper}>
             <NotificationSystem ref={notificationSystem} />
@@ -100,7 +99,9 @@ const Questions : React.FC = ()=>{
                                         <div
                                             key={idex}
                                             onClick={()=>checkAnswers(value ,item.id)} 
-                                            className={isCheckAnswers === value.id && isClickAnswers === item.id ? "answers acvive" : "answers"}
+                                            className={ isCheckAnswers === value.id && 
+                                                        isClickAnswers === item.id
+                                                            ? classes.answers+" "+classes.acvive : classes.answers}
                                         >   
                                             <p className="d-flex justify-content-start align-items-center">
                                                 <span className={classes.answers__icon}>{String.fromCharCode(65 + idex)}</span>
@@ -113,7 +114,7 @@ const Questions : React.FC = ()=>{
                                 </div>
                                 <div className={classes.quiz__btn}>
                                     <button className={classes.submit} onClick={()=>onResultAnswers(item.id)}>Submit</button>
-                                    <button className={isClick === true ? classes.submit : classes.submit+" "+"js-pointer-events"} onClick={()=>onNextAnswers(item.id)}>Next</button>
+                                    <button className={isClick === true ? classes.submit : classes.submit+" "+classes.js_pointer_events} onClick={()=>onNextAnswers(item.id)}>Next</button>
                                 </div>
                             </div>
                         )

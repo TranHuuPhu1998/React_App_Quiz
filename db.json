@@ -23,28 +23,6 @@
       "id": 31
     },
     {
-      "question": "tranhuuphu11111",
-      "answers": [
-        {
-          "id": 0,
-          "content": "123",
-          "isCorrect": false
-        },
-        {
-          "id": 1,
-          "content": "222",
-          "isCorrect": true
-        },
-        {
-          "id": 2,
-          "content": "333",
-          "isCorrect": false
-        }
-      ],
-      "category": "JavaScript OPP",
-      "id": 32
-    },
-    {
       "question": "State and Props ??",
       "answers": [
         {
@@ -267,51 +245,7 @@
         }
       ],
       "category": "React JS Lever 1",
-      "id": 43
-    },
-    {
-      "question": "tranhuuphu",
-      "answers": [
-        {
-          "id": 0,
-          "content": "1111",
-          "isCorrect": false
-        },
-        {
-          "id": 1,
-          "content": "222",
-          "isCorrect": false
-        },
-        {
-          "id": 2,
-          "content": "333",
-          "isCorrect": true
-        }
-      ],
-      "category": "React JS Lever 1",
       "id": 44
-    },
-    {
-      "question": "11111111111",
-      "answers": [
-        {
-          "id": 0,
-          "content": "1111",
-          "isCorrect": false
-        },
-        {
-          "id": 1,
-          "content": "222",
-          "isCorrect": false
-        },
-        {
-          "id": 2,
-          "content": "333",
-          "isCorrect": true
-        }
-      ],
-      "category": "React JS Lever 1",
-      "id": 45
     }
   ],
   "listlesson": [

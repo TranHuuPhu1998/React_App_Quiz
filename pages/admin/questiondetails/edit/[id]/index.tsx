@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux'
 import {useDispatch} from 'react-redux'
 import classes from  '../../styles.scss'
 
-import { RequestApiQuestionPUT , RequestApiListLesson } from '../../../../actions/index'
+import { RequestApiQuestionPUT , RequestApiListLesson } from '../../../../../actions/index'
 import EditQuestionItem from './ItemEdit'
 
 let rs:any[] = []

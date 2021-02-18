@@ -36,7 +36,7 @@ const AllQuestion : React.FC = () =>{
     return (
         <div>
             <div className={classes.quiz_add}>
-                <Link href="/">Add Question</Link>
+                <Link href="/admin/">Add Question</Link>
             </div>
             <div className={classes.quiz_allquestions}>
                 <p>ALL QUESTIONS</p>
@@ -46,7 +46,7 @@ const AllQuestion : React.FC = () =>{
                 questionsData && questionsData?.map((item:any,index:number)=>{
                    return (
                     <div key={index} >
-                        <Link href={`/questiondetails/${item.id}`}>
+                        <Link href={`/admin/questiondetails/${item.id}`}>
                             <a className={classes.quiz_question}>{index+1}:{item.question}</a> 
                         </Link>
                     </div>

@@ -2,7 +2,6 @@ import * as React from 'react'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useSelector , useDispatch } from "react-redux";
-import Link from 'next/link'
 import { RequestApiCategory , RequestApiListLesson } from '../../actions/index'
 
 import  classes from './styles.scss'
@@ -10,11 +9,11 @@ import  classes from './styles.scss'
 const ListLesson: React.FC = ({}) => {
 
     const router = useRouter()
+    const dispatch = useDispatch()
     const listLesson = useSelector((state: any) => state.listlesson)
     const category = useSelector((state: any) => state.category)
     const questions = useSelector((state: any) => state.questions)
 
-    const dispatch = useDispatch()
     useEffect(() => {
         dispatch(RequestApiCategory())
         dispatch(RequestApiListLesson())
@@ -27,7 +26,6 @@ const ListLesson: React.FC = ({}) => {
                 router.push(`questions/${value}`)
             }
         })
-    
     }
 
     return (
@@ -66,6 +64,5 @@ const ListLesson: React.FC = ({}) => {
 
     )
 }
-
 
 export default ListLesson

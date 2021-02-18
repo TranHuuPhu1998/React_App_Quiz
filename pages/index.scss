@@ -4,13 +4,12 @@
     flex-direction: column;
     justify-content: space-between;
     max-width: 1200px;
-    background-color: azure;
 }
 .app_main{
     min-height: 100vh;
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    background-color: azure;
     position: relative;
     top: 58px;
 }

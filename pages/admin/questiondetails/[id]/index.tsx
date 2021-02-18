@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useSelector } from 'react-redux'
 
-import { RequestApiQuestion ,RequestApiQuestionDELETE } from '../../../actions/index'
+import { RequestApiQuestion ,RequestApiQuestionDELETE } from '../../../../actions/index'
 import { useDispatch } from "react-redux";
 import classes from '../styles.scss'
 
@@ -47,7 +47,7 @@ const QuestionDetails : React.FC = () =>{
                                     }
                                 </div>
                                 <button onClick={()=> dispatch(RequestApiQuestionDELETE(item.id))} className={`btn btn-success m-3`}>Delete</button>
-                                <button onClick={()=> router.push(`/questiondetails/edit/${item.id}`)} className="btn btn-warning">Edit</button>
+                                <button onClick={()=> router.push(`/admin/questiondetails/edit/${item.id}`)} className="btn btn-warning">Edit</button>
                             </div>
                         )
                 })

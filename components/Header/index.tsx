@@ -20,7 +20,7 @@ export const Header : React.FC = () => {
         <ul className={classes.menu +" "+ classes.menu_main_menu}>
           <li className={classes.menu__item +" "+ classes.current}><a href="/learning">Học tập</a>
           </li>
-          <li className={classes.menu__item}><a href="/listLesson">Luyện  tập</a>
+          <li className={classes.menu__item}><a href="/listlesson">Luyện  tập</a>
           </li>
           <li className={classes.menu__item}><a href="/fights">Thi đấu</a>
           </li>
